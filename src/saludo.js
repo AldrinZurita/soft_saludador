@@ -1,4 +1,4 @@
-import saludo_nom from "./saludo_nom";
+import saludo_hora from "./saludos.js";
 
 const first = document.querySelector("#nombre");
 const second = document.querySelector("#apellido");
@@ -11,5 +11,5 @@ form.addEventListener("submit", (event) => {
   const name = String(first.value);
   const lastName = String(second.value);
 
-  div.innerHTML = "<p>" + saludo_nom(name, lastName) + "</p>";
+  div.innerHTML = "<p>" + saludo_hora(name, lastName) + "</p>";
 });
