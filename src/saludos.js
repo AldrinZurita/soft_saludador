@@ -24,12 +24,20 @@ function saludo_sexxx(name, lastName, sexValue) {
     let saludoBase = saludo_hora(name, lastName);
 
     if (sexValue === "masculino") {
-        return saludoBase.replace(name, `señor ${name}`);
+        return saludoBase.replace(name, `señorito ${name}`);
     } else if (sexValue === "femenino") {
-        return saludoBase.replace(name, `señora ${name}`);
+        return saludoBase.replace(name, `señorita ${name}`);
     } else {
         return saludoBase;
     }
 }
 
-export default saludo_sexxx;
+function saludo_sr(name, lastName, sexValue, ageValue) {
+    const saludoBase = saludo_hora(name, lastName);
+    const titulo = ageValue > 30 ? (sexValue === "masculino" ? "señor" : "señora") : (sexValue === "masculino" ? "señorito" : "señorita");
+    return saludoBase.replace(name, `${titulo} ${name}`);
+}
+
+
+
+export default saludo_sr;

@@ -1,7 +1,8 @@
-import saludo_hora from "./saludos.js";
+import saludo_sr from "./saludos.js";
 
 const first = document.querySelector("#nombre");
 const second = document.querySelector("#apellido");
+const age = document.querySelector("#edad");
 const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 
@@ -11,6 +12,7 @@ form.addEventListener("submit", (event) => {
   const name = String(first.value);
   const lastName = String(second.value);
   const sexValue = document.querySelector('input[name="sexo"]:checked')?.value || "No especificado";
+  const ageValue = Number(age.value);
 
-  div.innerHTML = "<p>" + saludo_hora(name, lastName, sexValue) + "</p>";
+  div.innerHTML = "<p>" + saludo_sr(name, lastName, sexValue, ageValue) + "</p>";
 });
