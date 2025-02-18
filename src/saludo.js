@@ -10,6 +10,7 @@ form.addEventListener("submit", (event) => {
 
   const name = String(first.value);
   const lastName = String(second.value);
+  const sexValue = document.querySelector('input[name="sexo"]:checked')?.value || "No especificado";
 
-  div.innerHTML = "<p>" + saludo_hora(name, lastName) + "</p>";
+  div.innerHTML = "<p>" + saludo_hora(name, lastName, sexValue) + "</p>";
 });

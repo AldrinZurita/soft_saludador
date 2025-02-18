@@ -20,4 +20,16 @@ function saludo_hora(name, lastName){
     return saludo
 }
 
-export default saludo_hora;
+function saludo_sexxx(name, lastName, sexValue) {
+    let saludoBase = saludo_hora(name, lastName);
+
+    if (sexValue === "masculino") {
+        return saludoBase.replace(name, `señor ${name}`);
+    } else if (sexValue === "femenino") {
+        return saludoBase.replace(name, `señora ${name}`);
+    } else {
+        return saludoBase;
+    }
+}
+
+export default saludo_sexxx;
